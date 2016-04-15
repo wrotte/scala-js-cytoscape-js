@@ -28,7 +28,7 @@ scalacOptions ++= Seq("-deprecation", "-feature", "-Xfatal-warnings")
 
 homepage := Some(url("http://scala-js.org/"))
 
-licenses += ("BSD 3-Clause", url("http://opensource.org/licenses/BSD-3-Clause"))
+licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 
 publishMavenStyle := true
 
