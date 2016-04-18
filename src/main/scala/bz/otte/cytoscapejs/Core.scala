@@ -9,11 +9,11 @@ import scala.scalajs.js
 @js.native
 class Core extends js.Object {
   // Graph
-    def add(element: Element): Unit = js.native
+    def add(element: ElementObject): Unit = js.native
 
-    def add(elements: js.Array[Element]): Unit = js.native
+    def add(elements: js.Array[ElementObject]): Unit = js.native
 
-    def remove(element: Element): Unit = js.native
+    def remove(element: ElementObject): Unit = js.native
 
     def remove(selector: String): Unit = js.native
 
@@ -21,19 +21,19 @@ class Core extends js.Object {
 
     def collection(selector: String): Unit = js.native
 
-    def collection(elements: js.Array[Element]): Unit = js.native
+    def collection(elements: js.Array[ElementObject]): Unit = js.native
 
     def getElementById(id: String): Element = js.native
 
-    def elements(selector: String): Unit = js.native
+    def elements(selector: String): Collection = js.native
 
-    def nodes(selector: String): Unit = js.native
+    def nodes(selector: String): Collection = js.native
 
-    def edges(selector: String): Unit = js.native
+    def edges(selector: String): Collection = js.native
 
-    def filter(selector: String): Unit = js.native
+    def filter(selector: String): Collection = js.native
 
-    def filter(selector: js.Function2[Int, Element, Boolean]): Unit = js.native
+    def filter(selector: js.Function2[Int, ElementObject, Boolean]): Collection = js.native
 
     def batch(batch_fn: js.Function): Unit = js.native
 
@@ -54,11 +54,11 @@ class Core extends js.Object {
 
 
   // Events
-  def on(events: String): Unit = js.native
+  def on(events: String, handler: js.Function1[Event, Unit]): Unit = js.native
 
-  def on(events: String, selector: String): Unit = js.native
+  def on(events: String, selector: String, handler: js.Function1[Event, Unit]): Unit = js.native
 
-  def on(events: String, selector: String, data: js.Object, handler: js.Function1[Element, Nothing]): Unit = js.native
+  def on(events: String, selector: String, data: js.Object, handler: js.Function1[ElementObject, Nothing]): Unit = js.native
 
   // TODO:  Replace with js.promise
   def promiseOn(events: String): js.Object = js.native
@@ -67,13 +67,13 @@ class Core extends js.Object {
 
   def one(events: String, selector: String): Unit = js.native
 
-  def one(events: String, selector: String, data: js.Object, handler: js.Function1[Element, Nothing]): Unit = js.native
+  def one(events: String, selector: String, data: js.Object, handler: js.Function1[ElementObject, Nothing]): Unit = js.native
 
   def off(events: String): Unit = js.native
 
   def off(events: String, selector: String): Unit = js.native
 
-  def off(events: String, selector: String, handler: js.Function1[Element, Nothing]): Unit = js.native
+  def off(events: String, selector: String, handler: js.Function1[ElementObject, Nothing]): Unit = js.native
 
   def trigger(events: String): Unit = js.native
 
@@ -190,7 +190,7 @@ class Core extends js.Object {
 
   def makeLayout(options: js.Object) : js.Object = js.native
 
-  def style() : js.Object = js.native
+  def style() : Style = js.native
 
   def png(options: js.Object) : String = js.native
 

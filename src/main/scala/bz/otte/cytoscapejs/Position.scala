@@ -7,6 +7,15 @@ import scala.scalajs.js
   */
 @js.native
 trait Position extends js.Object{
-  var x: Double
-  var y: Double
+  val x: Double
+  val y: Double
 }
+
+object Position {
+  def apply(_x: Double, _y: Double) = new js.Object() {
+       val y: Double = _y
+       val x: Double = _x
+    }.asInstanceOf[Position]
+  }
+
+
