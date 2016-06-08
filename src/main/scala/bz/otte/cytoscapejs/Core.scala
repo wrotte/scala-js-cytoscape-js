@@ -9,48 +9,49 @@ import scala.scalajs.js
 @js.native
 class Core extends js.Object {
   // Graph
-    def add(element: ElementObject): Unit = js.native
+  def add(element: ElementObject): Unit = js.native
 
-    def add(elements: js.Array[ElementObject]): Unit = js.native
+  def add(elements: Collection): Unit = js.native
 
-    def remove(element: ElementObject): Unit = js.native
+  def add(elements: js.Array[ElementObject]): Unit = js.native
 
-    def remove(selector: String): Unit = js.native
+  def remove(element: ElementObject): Unit = js.native
 
-    def collection(): Unit = js.native
+  def remove(selector: String): Unit = js.native
 
-    def collection(selector: String): Unit = js.native
+  def collection(): Unit = js.native
 
-    def collection(elements: js.Array[ElementObject]): Unit = js.native
+  def collection(selector: String): Unit = js.native
 
-    def getElementById(id: String): Element = js.native
+  def collection(elements: js.Array[ElementObject]): Unit = js.native
 
-    def elements(selector: String): Collection = js.native
+  def getElementById(id: String): Element = js.native
 
-    def nodes(selector: String): Collection = js.native
+  def elements(selector: String): Collection = js.native
 
-    def edges(selector: String): Collection = js.native
+  def nodes(selector: String): Collection = js.native
 
-    def filter(selector: String): Collection = js.native
+  def edges(selector: String): Collection = js.native
 
-    def filter(selector: js.Function2[Int, ElementObject, Boolean]): Collection = js.native
+  def filter(selector: String): Collection = js.native
 
-    def batch(batch_fn: js.Function): Unit = js.native
+  def filter(selector: js.Function2[Int, ElementObject, Boolean]): Collection = js.native
 
-    def startBatch(): Unit = js.native
+  def batch(batch_fn: js.Function): Unit = js.native
 
-    def endBatch(): Unit = js.native
+  def startBatch(): Unit = js.native
 
-    def destroy(): Unit = js.native
+  def endBatch(): Unit = js.native
 
-    def scratch(): js.Object = js.native
+  def destroy(): Unit = js.native
 
-    def scratch(namespace: String): js.Object = js.native
+  def scratch(): js.Object = js.native
 
-    def scratch(namespace: String, value: js.Object): Unit = js.native
+  def scratch(namespace: String): js.Object = js.native
 
-    def removeScratch(namespace: String): js.Object = js.native
+  def scratch(namespace: String, value: js.Object): Unit = js.native
 
+  def removeScratch(namespace: String): js.Object = js.native
 
 
   // Events
@@ -111,7 +112,7 @@ class Core extends js.Object {
 
   def userPanningEnabled(): Boolean = js.native
 
-  def userPanningEnabled(flag: Boolean) : Unit = js.native
+  def userPanningEnabled(flag: Boolean): Unit = js.native
 
   def zoom(level: Double): Unit = js.native
 
@@ -119,29 +120,29 @@ class Core extends js.Object {
     val level: Double
     val position: Position
     val renderedPosition: Position
-    }) : Unit = js.native
+  }): Unit = js.native
 
   def zoomingEnabled(): Boolean = js.native
 
-  def zoomingEnabled(flag: Boolean) : Unit = js.native
+  def zoomingEnabled(flag: Boolean): Unit = js.native
 
   def userZoomingEnabled(): Boolean = js.native
 
-  def userZoomingEnabled(flag: Boolean) : Unit = js.native
+  def userZoomingEnabled(flag: Boolean): Unit = js.native
 
   def minZoom(): Double = js.native
 
-  def minZoom(level: Double) : Unit = js.native
+  def minZoom(level: Double): Unit = js.native
 
   def maxZoom(): Double = js.native
 
-  def maxZoom(level: Double) : Unit = js.native
+  def maxZoom(level: Double): Unit = js.native
 
   def viewport(zoom: Double, pan: Position): Unit = js.native
 
   def boxSelectionEnabled(): Boolean = js.native
 
-  def boxSelectionEnabled(flag: Boolean) : Unit = js.native
+  def boxSelectionEnabled(flag: Boolean): Unit = js.native
 
   def width(): Int = js.native
 
@@ -154,19 +155,19 @@ class Core extends js.Object {
     val y2: Int
     val w: Int
     val h: Int
-    } = js.native
+  } = js.native
 
   def autolock(): Boolean = js.native
 
-  def autolock(flag: Boolean) : Unit = js.native
+  def autolock(flag: Boolean): Unit = js.native
 
   def autoungrabify(): Boolean = js.native
 
-  def autoungrabify(flag: Boolean) : Unit = js.native
+  def autoungrabify(flag: Boolean): Unit = js.native
 
   def autounselectify(): Boolean = js.native
 
-  def autounselectify(flag: Boolean) : Unit = js.native
+  def autounselectify(flag: Boolean): Unit = js.native
 
   def forceRender(): Unit = js.native
 
@@ -174,29 +175,29 @@ class Core extends js.Object {
 
   def animated(): Boolean = js.native
 
-  def animate(options: js.Object) : Unit = js.native
+  def animate(options: js.Object): Unit = js.native
 
-  def animation(options: js.Object) : js.Object = js.native
+  def animation(options: js.Object): js.Object = js.native
 
-  def delay(millis: Long, func: js.Function) : Unit = js.native
+  def delay(millis: Long, func: js.Function): Unit = js.native
 
-  def delayAnimation(millis: Long) : js.Object = js.native
+  def delayAnimation(millis: Long): js.Object = js.native
 
-  def stop(clearQueue: Boolean, jumpToEnd: Boolean) : Unit = js.native
+  def stop(clearQueue: Boolean, jumpToEnd: Boolean): Unit = js.native
 
-  def clearQueue() : Unit = js.native
+  def clearQueue(): Unit = js.native
 
-  def layout(options: js.Object) : Unit = js.native
+  def layout(options: js.Object): Unit = js.native
 
-  def makeLayout(options: js.Object) : js.Object = js.native
+  def makeLayout(options: js.Object): js.Object = js.native
 
-  def style() : Style = js.native
+  def style(): Style = js.native
 
-  def png(options: js.Object) : String = js.native
+  def png(options: js.Object): String = js.native
 
-  def jpg(options: js.Object) : String = js.native
+  def jpg(options: js.Object): String = js.native
 
-  def json() : String = js.native
+  def json(): String = js.native
 
-  def json(json: String) : Unit = js.native
+  def json(json: String): Unit = js.native
 }
