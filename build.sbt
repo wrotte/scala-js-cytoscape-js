@@ -16,8 +16,11 @@ libraryDependencies ++= Seq("org.scala-js" %%% "scalajs-dom" % "0.9.0",
   "com.lihaoyi" %%% "utest" % "0.3.0" % "test")
 
 
-jsDependencies ++= Seq("org.webjars" % "jquery" % "2.2.0" / "2.2.0/jquery.js",
-  "org.webjars.npm" % "cytoscape" % "2.6.6" / "2.6.6/dist/cytoscape.js")
+jsDependencies ++= Seq(
+  "org.webjars" % "jquery" % "2.2.0" / "2.2.0/jquery.js",
+  "org.webjars.npm" % "cytoscape" % "2.6.6" / "2.6.6/dist/cytoscape.js",
+  "org.webjars.npm" % "cytoscape-qtip" % "2.4.0" / "2.4.0/cytoscape-qtip.js"
+)
 
 
 testFrameworks += new TestFramework("utest.runner.Framework")

@@ -24,4 +24,9 @@ class Collection extends js.Object with Element {
   def first() : Element = js.native
 
   def last() : Element = js.native
+
+  // qTip integration
+  def qtip(options: js.Object): Collection = js.native
+
+  def qtip(api: String = "api"): bz.otte.qtip2.Api = js.native
 }
