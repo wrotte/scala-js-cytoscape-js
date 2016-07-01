@@ -43,6 +43,7 @@ trait Element extends js.Object {
   def flashClass(string: String, duration: Long = 0) : Unit = js.native
   def hasClass(string: String) : Boolean = js.native
   def layout(options: js.Object) : Unit = js.native
+  def style(style : js.Object) : Unit = js.native
 }
 
 object ElementObject {
