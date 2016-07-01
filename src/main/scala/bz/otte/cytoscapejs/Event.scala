@@ -8,7 +8,7 @@ import scala.scalajs.js
 @js.native
 trait Event extends js.Object{
   val cy : Core = js.native
-  val cyTarget : js.Object = js.native
+  val cyTarget : Element = js.native
   val `type`: String = js.native
   val namespace: String = js.native
   val data: js.Object = js.native

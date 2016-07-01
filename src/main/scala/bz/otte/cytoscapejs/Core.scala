@@ -15,6 +15,8 @@ class Core extends js.Object {
 
   def add(elements: js.Array[ElementObject]): Unit = js.native
 
+  def add(elements: Any) : Unit = js.native
+
   def remove(element: ElementObject): Unit = js.native
 
   def remove(selector: String): Unit = js.native
