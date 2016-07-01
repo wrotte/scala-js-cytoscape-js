@@ -202,4 +202,9 @@ class Core extends js.Object {
   def json(): String = js.native
 
   def json(json: String): Unit = js.native
+
+  // qTip2 integration
+  def qtip(options: js.Object): Core = js.native
+
+  def qtip(api: String = "api"): bz.otte.qtip2.Api = js.native
 }
